@@ -8,7 +8,7 @@ var _lobby_data_path = "res://assets/resources/lobby_data.tres"
 
 # item types
 @onready var WallItem = preload("res://scenes/items/WallItem.tscn")
-@onready var _xr = Util.is_xr()
+@onready var _xr = false
 
 @onready var _exhibit_hist = []
 @onready var _exhibits = {}
@@ -115,7 +115,7 @@ func _set_custom_door(title):
     _custom_door.to_title = title
     _custom_door.entry_door.set_open(true)
 
-func _reset_custom_door(title):
+func _reset_custom_door():
   if _custom_door and is_instance_valid(_custom_door):
     _custom_door.entry_door.set_open(false)
 
@@ -168,17 +168,14 @@ func _prepare_halls_for_teleport(from_hall, to_hall, entry_to_exit=false):
 
 func _teleport_player(from_hall, to_hall, entry_to_exit=false):
   if is_instance_valid(from_hall) and is_instance_valid(to_hall):
-    var pos = _player.global_position if not _xr else _player.get_node("XRCamera3D").global_position
+    var pos = _player.global_position
     var distance = (from_hall.position - pos).length()
     if distance > max_teleport_distance:
       return
     var diff_from = _player.global_position - from_hall.position
     var rot_diff = Util.vecToRot(to_hall.to_dir) - Util.vecToRot(from_hall.to_dir)
     _player.global_position = to_hall.position + diff_from.rotated(Vector3(0, 1, 0), rot_diff)
-    if not _xr:
-      _player.global_rotation.y += rot_diff
-    else:
-      _player.get_node("XRToolsPlayerBody").rotate_player(-rot_diff)
+    _player.global_rotation.y += rot_diff
 
     if entry_to_exit:
       to_hall.entry_door.set_open(true)

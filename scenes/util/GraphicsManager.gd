@@ -10,7 +10,7 @@ const MANAGED_LIGHTS_FREQUENCY := 1.0
 
 var _env
 var limit_fps = false
-var fps_limit = 60
+var fps_limit = 120
 var _default_settings_obj
 var fullscreen = false
 var render_scale = 1.0

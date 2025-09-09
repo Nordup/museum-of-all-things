@@ -1,7 +1,6 @@
 extends Control
 
 signal start
-signal start_webxr
 signal settings
 
 var fade_in_start = Color(0.0, 0.0, 0.0, 1.0)
@@ -9,7 +8,7 @@ var fade_in_end = Color(0.0, 0.0, 0.0, 0.0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-  _on_visibility_changed()
+  call_deferred("_on_visibility_changed")
   call_deferred("_start_fade_in")
 
   if Util.is_web():
@@ -17,10 +16,7 @@ func _ready() -> void:
 
 func _on_visibility_changed():
   if visible:
-    $MarginContainer/VBoxContainer/Start.grab_focus()
-
-func set_webxr_enabled(p_enabled):
-  %StartWebXR.visible = p_enabled
+    $MarginContainer/VBoxContainer/Start.call_deferred("grab_focus")
 
 func _start_fade_in():
   $FadeIn.color = fade_in_start
@@ -34,15 +30,9 @@ func _start_fade_in():
 func _on_start_pressed():
   emit_signal("start")
 
-func _on_start_web_xr_pressed() -> void:
-  emit_signal("start_webxr")
-
 func _on_settings_pressed():
   emit_signal("settings")
 
 func _on_quit_button_pressed():
-  get_tree().quit()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+#   get_tree().quit()
   pass

@@ -39,14 +39,13 @@ func clear_listeners(n, sig_name):
     c.signal.disconnect(c.callable)
 
 func is_openxr():
-  return ProjectSettings.get_setting_with_override("xr/openxr/enabled")
+  return false
 
 func is_webxr():
-  var webxr_interface: WebXRInterface = XRServer.find_interface("WebXR")
-  return webxr_interface and webxr_interface.is_initialized()
+  return false
 
 func is_xr():
-  return is_openxr() or is_webxr()
+  return false
 
 func is_web():
   return OS.get_name() == "Web"

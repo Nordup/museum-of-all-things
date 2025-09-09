@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_4i6s3")
 title = "Museum of All Things"
-description = "The Museum of All Things is a nearly-infinite virtual museum! You can find exhibits on millions of topics, from Arts in the Philippines to Zinc deficiency!"
+description = "The MoAT is a nearly-infinite virtual museum! You can find exhibits on millions of topics, from Arts in the Philippines to Zinc deficiency!"
 image = "res://assets/logo/moat_logo_large_white.png"
 export_folder = "/media/common/Projects/thegates-folder/ServerFiles/exports/museum_of_all_things"

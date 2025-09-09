@@ -1,7 +1,7 @@
 extends Node3D
 
 func _ready() -> void:
-  var viewport_scene = $Viewport2Din3D.get_scene_instance()
+  var viewport_scene = ($Viewport2Din3D as Viewport2Din3D).get_scene_instance()
   if viewport_scene:
     for line_edit in viewport_scene.find_children("*", "LineEdit"):
       line_edit.focus_entered.connect(_on_line_edit_focus_entered)
