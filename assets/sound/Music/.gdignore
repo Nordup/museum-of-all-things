@@ -1,0 +1,2 @@
+# Prevent Godot from importing/bundling anything in this directory.
+# Music tracks are downloaded at runtime and cached in user://music.

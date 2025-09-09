@@ -1,5 +1,5 @@
 assets - 269 MB
-    sound - 38 MB (was 46 MB)
+    sound - 9.2 MB (was 46 MB)
     textures - 67 MB
     fonts - 5.3 MB (was 153 MB)
     
