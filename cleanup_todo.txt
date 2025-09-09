@@ -1,5 +1,5 @@
 assets - 269 MB
-    sound - 46 MB
+    sound - 38 MB (was 46 MB)
     textures - 67 MB
     fonts - 5.3 MB (was 153 MB)
     
@@ -7,3 +7,8 @@ assets - 269 MB
 
 
 resource_definitions, scenes, shaders - 617 kB
+
+
+
+Download ambient music on demand
+res://assets/sound/Music/ - 30 MB
