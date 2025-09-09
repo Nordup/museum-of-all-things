@@ -1,0 +1,9 @@
+assets - 269 MB
+    sound - 46 MB
+    textures - 67 MB
+    fonts - 30 MB (was 153 MB)
+    
+    3d_tiles, certs, logo, models, resources, translations - 2.7 MB
+
+
+resource_definitions, scenes, shaders - 617 kB
