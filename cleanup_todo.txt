@@ -7,8 +7,3 @@ assets - 269 MB
 
 
 resource_definitions, scenes, shaders - 617 kB
-
-
-
-Download ambient music on demand
-res://assets/sound/Music/ - 30 MB

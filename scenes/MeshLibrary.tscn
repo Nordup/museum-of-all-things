@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://do2hoycmvhwx5"]
+[gd_scene load_steps=56 format=4 uid="uid://do2hoycmvhwx5"]
 
 [ext_resource type="Texture2D" uid="uid://dwkqvnh45q8ms" path="res://assets/textures/wood.png" id="1_warsw"]
 [ext_resource type="Material" uid="uid://x4bq1qrai2w2" path="res://assets/textures/carpet.tres" id="2_hh216"]
@@ -28,9 +28,6 @@ _surfaces = [{
 "vertex_data": PackedByteArray("AAAAQAAAgEAAAABAAAAAwAAAgEAAAABAAAAAQAAAgEAAAADAAAAAwAAAgEAAAADA/3/9//7//7//f/3//v//v/9//f/+//+//3/9//7//78=")
 }]
 blend_shape_mode = 0
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yaqsi"]
-points = PackedVector3Array(-2, 4, -2, -2, 4, 2, 2, 4, -2, 2, 4, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkpub"]
 resource_name = "Material.001"
@@ -497,9 +494,6 @@ surface_material_override/0 = ExtResource("2_tedfh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="floor"]
 collision_mask = 0
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
-shape = SubResource("ConvexPolygonShape3D_yaqsi")
 
 [node name="wall" type="MeshInstance3D" parent="."]
 visible = false
