@@ -21,7 +21,7 @@ func _thread_loop():
   while not WorkQueue.get_quitting():
     _mipmap_process_item()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
   if not Util.is_using_threads():
     _mipmap_process_item()
 
@@ -56,9 +56,8 @@ func _get_texture_data_rd(texture: Texture2D, callback: Callable):
   var rid = texture.get_rid()
   var format = RenderingServer.texture_get_format(rid)
   var rd_rid = RenderingServer.texture_get_rd_texture(rid)
-  RenderingServer.get_rendering_device().texture_get_data_async(rd_rid, 0, func(array) -> void:
-    _create_image(width, height, format, array, callback)
-  )
+  var array = RenderingServer.get_rendering_device().texture_get_data(rd_rid, 0)
+  _create_image(width, height, format, array, callback)
 
 func get_viewport_texture_with_mipmaps(subviewport: SubViewport, callback: Callable):
   await RenderingServer.frame_post_draw

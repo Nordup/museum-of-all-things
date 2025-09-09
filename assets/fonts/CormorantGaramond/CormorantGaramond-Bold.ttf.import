@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://n33gotmdcskb"
+uid="uid://btxj3bc2ha06g"
 path="res://.godot/imported/CormorantGaramond-Bold.ttf-756996922ed88cd6e88f7cc53b62cbc9.fontdata"
 
 [deps]
@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/CormorantGaramond-Bold.ttf-756996922ed88cd6e8
 
 Rendering=null
 antialiasing=1
-generate_mipmaps=true
+generate_mipmaps=false
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
@@ -23,18 +23,12 @@ allow_system_fallback=true
 force_autohinter=false
 hinting=1
 subpixel_positioning=1
-keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
-fallbacks=[Resource("res://assets/fonts/NotoSerifJapanese/NotoSerifJP-Bold.ttf"), Resource("res://assets/fonts/NotoSansBengali/NotoSansBengali-Bold.ttf")]
+fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0)
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

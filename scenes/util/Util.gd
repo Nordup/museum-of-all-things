@@ -55,7 +55,7 @@ func is_using_threads():
   return OS.has_feature("threads")
 
 func is_compatibility_renderer():
-  return RenderingServer.get_current_rendering_method() == 'gl_compatibility'
+  return ProjectSettings.get_setting_with_override("rendering/renderer/rendering_method") == "gl_compatibility"
 
 func is_meta_quest():
   return OS.has_feature("meta_quest")
